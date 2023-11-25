@@ -27,29 +27,6 @@ class dynamicTable extends Page {
         await this.refreshTableButton.click()
     }
 
-    // async verifyTableData(data) {
-
-    //     const tableRows = await this.tableDataValues
-    //     const tableData = [];
-
-    //     for (let row = 0; row < tableRows.length; row++) {
-    //         if ((row % 3 == 0)) {
-
-    //         }
-    //         const rowData = {
-    //             name: await tableRows[(row % 3 == 0)].getText(),
-    //             age: parseInt(await tableRows[(row % 3 == 1)].getText(), 10),
-    //             gender: await tableRows[(row % 3 == 2)].getText()
-    //         };
-    //         tableData.push(rowData);
-    //     }
-    //     await console.log('THis is tableData actual data' + JSON.stringify(await tableData))
-    //     await console.log('Thos is Expected Data ' + data)
-    //     await assert.deepStrictEqual(tableData, data);
-
-    //     console.log('Assertion passed: Table data matches the expected JSON data.');
-
-    // }
 
     async verifyTableData(data) {
         const tableData = await this.tableDataValues
