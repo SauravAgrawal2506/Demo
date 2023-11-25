@@ -1,5 +1,5 @@
 import Page from './page.js';
-import assert from 'assert'
+
 
 class dynamicTable extends Page {
 
