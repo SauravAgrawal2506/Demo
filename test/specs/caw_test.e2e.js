@@ -6,7 +6,7 @@ import { userData } from '../testData/userData.js'
 describe('Test Assignment', () => {
     it('Insert and Validate dyanmic table data', async () => {
         await LoginPage.open()
-        await dataTablePage.AddTableData(userData)
+        await dataTablePage.addTableData(userData)
         await dataTablePage.refreshTable()
         await dataTablePage.verifyTableData(userData)
     })

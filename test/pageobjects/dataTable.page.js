@@ -16,7 +16,7 @@ class dynamicTable extends Page {
         return $$('//table[@id="dynamictable"]//tr//td');
     }
 
-    async AddTableData(data) {
+    async addTableData(data) {
         await this.tableDataButton.click()
         const inputBox = await this.tableDataInputBox
         await inputBox.waitForDisplayed({ timeout: 3000 })
@@ -41,6 +41,7 @@ class dynamicTable extends Page {
             let gender = await tableData[((i * 3) + 2)].getText()
             expect(gender).toEqual(data[i].gender)
 
+            console.log('Data is asserted successfully')
         }
     }
 }
